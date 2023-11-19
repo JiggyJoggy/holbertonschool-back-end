@@ -19,7 +19,7 @@ def gather_data_api(employee_id):
         if task['completed']:
             task_done += 1
 
-    print(f"Employee {name} is done with tasks({task_done}/{len(todo_data)})")
+    print(f"Employee {name} is done with tasks({task_done}/{len(todo_data)}):")
 
     for task in todo_data:
         if task['completed']:
