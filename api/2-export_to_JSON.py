@@ -5,7 +5,7 @@ import requests
 from sys import argv
 
 
-def export_to_csv(employee_id):
+def export_to_JSON(employee_id):
     url = 'https://jsonplaceholder.typicode.com/'
     employee_id_url = f'{url}/users/{employee_id}'
     todo_url = f'{url}/users/{employee_id}/todos'
@@ -31,4 +31,4 @@ def export_to_csv(employee_id):
 
 if __name__ == '__main__':
     employee_id = int(argv[1])
-    export_to_csv(employee_id)
+    export_to_JSON(employee_id)
