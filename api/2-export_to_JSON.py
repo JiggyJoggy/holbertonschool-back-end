@@ -24,7 +24,7 @@ def export_to_csv(employee_id):
         }
             for task, done_tasks in all_tasks.items()
         )}
-    
+
     with open(f"{employee_id}.json", mode='w') as jsonfile:
         json.dump(json_data, jsonfile)
 
