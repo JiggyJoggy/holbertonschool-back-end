@@ -16,11 +16,10 @@ def export_to_csv(employee_id):
     name = user_data.get('username')
     all_tasks = {task['title']: task['completed'] for task in todo_data}
 
-
     with open(f"{employee_id}.csv", mode='w') as csvfile:
-        csvfile = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
+        file_writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
         [
-            csvfile.writerow([employee_id, name, task_done, task])
+            file_writer.writerow([employee_id, name, task_done, task])
             for task, task_done in all_tasks.items()
         ]
 
